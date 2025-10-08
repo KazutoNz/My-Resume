@@ -1,0 +1,531 @@
+/* style.css */
+
+/*--------------------------------------------------------------
+                          GENERAL STYLES
+--------------------------------------------------------------*/
+
+/* General reset for margin and padding */
+body, h1, h2, h3, p, a {
+    margin: 0; /* คืนค่าระยะห่าง */
+    padding: 0; /* คืนค่าระยะห่าง */
+    font-family: Arial, sans-serif; /* ตั้งค่าแบบอักษร */
+}
+
+/*--------------------------------------------------------------
+                          BODY STYLING
+--------------------------------------------------------------*/
+
+/* Body styling */
+body {
+    display: flex; /* ใช้ flexbox */
+    flex-direction: column; /* เรียงตามแนวดิ่ง */
+    min-height: 100vh; /* ให้เต็มความสูงของหน้าเว็บ */
+    background-color: #000; /* สีพื้นหลังเป็นดำ */
+    color: #fff; /* ตัวอักษรสีขาว */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+    padding: 20px; /* ระยะห่างขอบ */
+}
+
+/*--------------------------------------------------------------
+                          HEADER STYLING
+--------------------------------------------------------------*/
+
+/* Header styling */
+h1 {
+    color: #c3c3c3; /* สีหัวข้อ */
+    align-items: center; /* จัดแนวกลาง */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    margin-bottom: 15px; /* ระยะห่างด้านล่าง */
+}
+
+/*--------------------------------------------------------------
+                          NAVBAR ANIMATION
+--------------------------------------------------------------*/
+
+/* Navbar Menu Animation */
+body, html {
+    margin: 0; /* คืนค่าระยะห่าง */
+    font: bold 14px/1.4 'Open Sans', Arial, sans-serif; /* ตั้งค่าแบบอักษร */
+    background: #000; /* สีพื้นหลัง */
+}
+
+ul { 
+    margin: 10px auto 0; /* ระยะห่างจากด้านบน */
+    padding: 0; /* คืนค่าระยะห่าง */
+    list-style: none; /* ลบสัญลักษณ์ในรายการ */
+    display: table; /* ใช้ตารางในการจัดรูปแบบ */
+    width: 600px; /* ความกว้างของเมนู */
+    text-align: center; /* จัดกลาง */
+}
+
+li { 
+    display: table-cell; /* ใช้เซลล์ตาราง */
+    position: relative; /* ใช้ตำแหน่งสัมพัทธ์ */
+    padding: 15px 0; /* ระยะห่างภายใน */
+}
+
+a {
+    color: #fff; /* สีของลิงก์ */
+    text-transform: uppercase; /* ตัวพิมพ์ใหญ่ทั้งหมด */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    letter-spacing: 0.15em; /* ระยะห่างระหว่างตัวอักษร */
+    display: inline-block; /* จัดให้ลิงก์เป็นบล็อก */
+    padding: 15px 20px; /* เพิ่มพื้นที่ในการคลิก */
+    position: relative; /* ใช้ตำแหน่งสัมพัทธ์ */
+}
+
+a:after {    
+    content: ""; /* สร้างเนื้อหาเพื่อใช้ในการทำแอนิเมชัน */
+    bottom: 0; /* ตั้งตำแหน่งฐาน */
+    display: block; /* เปลี่ยนเป็นบล็อก */
+    height: 2px; /* ความสูงของเส้นขีดใต้ */
+    left: 50%; /* เริ่มจากกลาง */
+    position: absolute; /* ใช้ตำแหน่งสัมพัทธ์ */
+    background: #fff; /* สีของเส้นขีดใต้ */
+    transition: width 0.3s ease 0s, left 0.3s ease 0s; /* ทำให้การเปลี่ยนแปลงราบรื่น */
+    width: 0; /* เริ่มต้นที่ 0 */
+}
+
+a:hover:after { 
+    width: 100%; /* เส้นขีดขยายเมื่อโฮเวอร์ */
+    left: 0; /* เริ่มจากซ้ายสุด */
+}
+
+/* Responsive behavior for small screens */
+@media screen and (max-height: 300px) {
+    ul {
+        margin-top: 40px; /* เปลี่ยนระยะห่างเมื่อหน้าจอเล็ก */
+    }
+}
+
+/*--------------------------------------------------------------
+                          MARK STYLING
+--------------------------------------------------------------*/
+
+/* Mark styling */
+mark {
+    background: rgba(255,255,255,0.15); /* พื้นหลังของ mark */
+    color: #00BFFF; /* สีของข้อความใน mark */
+    border: 1px solid #00BFFF44; /* กรอบ */
+    border-radius: 10px; /* ขอบกลม */
+    backdrop-filter: blur(2px); /* เบลอพื้นหลัง */
+    padding: 2px 10px; /* ระยะห่างภายใน */
+    font-weight: 500; /* น้ำหนักตัวอักษร */
+}
+
+/*--------------------------------------------------------------
+                          FOOTER STYLING
+--------------------------------------------------------------*/
+
+/* Footer styling */
+footer {
+    margin-top: auto; /* ผลักดันฟุตเตอร์ไปยังด้านล่าง */
+    text-align: center; /* จัดกึ่งกลาง */
+    color: white; /* สีฟุตเตอร์ */
+}
+
+/*--------------------------------------------------------------
+                       ABOUT ME CONTENT STYLING
+--------------------------------------------------------------*/
+
+/* About Me Content Styling */
+div[name="content-aboutme"] {
+    display: flex; /* ใช้ flexbox */
+    flex-direction: column; /* เรียงด้านล่าง */
+    align-items: center; /* จัดที่กลาง */
+    justify-content: center; /* จัดกลาง */
+    max-width: 900px; /* ความกว้างสูงสุด */
+    margin: 0 auto 30px auto; /* จัดกลางและมีระยะด้านล่าง */
+    padding: 30px 20px; /* ระยะห่างภายใน */
+    background: #1a1a1a; /* สีพื้นหลัง */
+    border-radius: 12px; /* ขอบกลม */
+    border: 1px solid #444; /* กรอบ */
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.1); /* เงาสีฟ้า */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+/* Circular image styling */
+.circular-image {
+    width: 100%; /* ความกว้าง 100% */
+    height: auto; /* ความสูงอัตโนมัติ */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    max-width: 250px; /* ขนาดสูงสุด */
+    max-height: 80vh; /* ความสูงสูงสุด */
+    object-fit: cover; /* ครอบรูปให้เข้ากับขนาด */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงา */
+}
+
+/* About Me Title */
+div[name="content-aboutme"] h1 {
+    color: #00BFFF; /* สีหัวข้อ */
+    margin-bottom: 18px; /* ระยะห่างด้านล่าง */
+    font-size: 2.2em; /* ขนาดตัวอักษร */
+    text-shadow: 0 2px 4px rgba(0, 191, 255, 0.2); /* เงาข้อความ */
+}
+
+/* About Me Text */
+div[name="content-aboutme"] p {
+    font-size: 1.5em; /* ขนาดตัวอักษร */
+    color: #eee; /* สีข้อความ */
+    line-height: 1.7; /* ระยะห่างระหว่างบรรทัด */
+    margin-bottom: 0; /* ระยะห่างด้านล่าง */
+}
+
+/*--------------------------------------------------------------
+                       UNDERLINE ANIMATION STYLES
+--------------------------------------------------------------*/
+
+/* Animation ขีดเส้นใต้ */
+.hover-underline-animation {
+    display: inline-block; /* ให้แสดงเป็นบล็อก */
+    position: relative; /* ใช้ตำแหน่งสัมพัทธ์ */
+}
+
+.hover-underline-animation::after {
+    content: ''; /* เนื้อหาเป็นศูนย์ */
+    position: absolute; /* ใช้ตำแหน่งสัมพัทธ์ */
+    width: 100%; /* ความกว้างของเส้น */
+    transform: scaleX(0); /* เริ่มต้นที่ 0 */
+    height: 2px; /* ความสูงของเส้นขีด */
+    bottom: 0; /* อยู่ที่ฐานของข้อความ */
+    left: 0; /* เริ่มที่ซ้าย */
+    background-color: #0087ca; /* สีเส้นขีด */
+    transition: transform 0.25s ease-out; /* เอฟเฟกต์การเปลี่ยนแปลง */
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1); /* ขยายเส้นขีดเมื่อโฮเวอร์ */
+}
+
+.hover-underline-animation.center::after {
+    transform-origin: bottom center; /* จุดเริ่มต้น */
+}
+
+.hover-underline-animation.center:hover::after {
+    transform-origin: bottom center; /* จุดเริ่มต้นเมื่อโฮเวอร์ */
+}
+
+/*--------------------------------------------------------------
+                       PROJECT SECTION STYLES
+--------------------------------------------------------------*/
+
+/* Styling for the project title */
+.project h3 {
+    color: #a5ff28c5; /* เปลี่ยนสีหัวข้อเป็นทอง */
+    font-size: 1.5em; /* ขนาดตัวอักษร */
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+}
+
+/* Styling for the project description */
+.project p {
+    color: #EAEAEA; /* เปลี่ยนสีข้อความเป็นเทาอ่อน */
+    font-size: 1.2em; /* ขนาดตัวอักษร */
+    line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
+    margin-bottom: 0; /* ไม่มีระยะห่างด้านล่าง */
+}
+
+/* Improved Project Div Styling */
+div[name="content-projects"] > div {
+    margin-top: 30px; /* ระยะห่างระหว่างปี */
+    position: relative; /* ทำให้ตำแหน่งสัมพัทธ์ */
+    padding-left: 40px; /* ระยะห่างซ้ายสำหรับจุด */
+}
+
+/* Header of the year */
+.year-indicator {
+    padding: 10px 0; /* ประมาณ */
+    font-weight: bold; /* น้ำหนักตัวอักษร */
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+}
+
+/* ปรับ Text ของ  H2*/
+.year-indicator h2 {
+    font-size: 1.6em; /* ขนาดตัวอักษร */
+    color: #98a9a8; /* สีข้อความ */
+    margin-left: 20px; /* ระยะห่างจากจุด */
+    text-align: left; /* จัดข้อความชิดซ้าย */
+    
+    text-decoration: none; /* ไม่มีการขีดเส้นใต้ */
+    letter-spacing: 0.14em; /* ระยะห่างระหว่างตัวอักษร */
+    display: inline-block; /* แสดงเป็นบล็อกแนวนอน */
+    padding: 15px 20px; /* ระยะห่างภายใน */
+    position: relative; /* ใช้ตำแหน่งสัมพัทธ์ */
+}
+
+.year-indicator h3 {
+    font-size: 1.5em; /* ขนาดตัวอักษร */
+    color: #98a9a8; /* สีข้อความ */
+    
+    text-decoration: none; /* ไม่มีการขีดเส้นใต้ */
+    letter-spacing: 0.14em; /* ระยะห่างระหว่างตัวอักษร */
+    display: inline-block; /* แสดงเป็นบล็อกแนวนอน */
+    position: relative; /* ใช้ตำแหน่งสัมพัทธ์ */
+}
+
+.year-indicator p{
+    font-size: 1.3em; /* ขนาดตัวอักษร */
+    color: #EAEAEA; /* สีข้อความ */
+    margin-bottom: 0; /* ไม่มีระยะห่างด้านล่าง */
+}
+
+/* ลักษณะของจุด */
+.dot {
+    position: absolute; /* ใช้ตำแหน่งสัมพัทธ์ */
+    left: 0; /* ตั้งจุดให้ชิดซ้าย */
+    top: 30px; /* ระยะห่างจากด้านบน */
+    width: 20px; /* ขนาดจุด */
+    height: 20px; /* ขนาดจุด */
+    background: #f7f7f8; /* สีพื้นหลังของจุด */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+}
+
+/* Project Style */
+.project {
+    margin-top: 15px; /* ระยะห่างระหว่างโปรเจ็กต์ */
+    background: #0e0e0e; /* สีพื้นหลังของโปรเจ็กต์ */
+    padding: 20px; /* ระยะห่างภายใน */
+    margin: inherit; /* มรดก */
+    border-radius: 5px; /* ขอบกลม */
+    transition: background 0.3s; /* เอฟเฟกต์การเปลี่ยนแปลง */
+}
+
+/* เอฟเฟกต์เมื่อโฮเวอร์ */
+.project:hover {
+    background: #3c3c3c; /* เปลี่ยนสีเมื่อเอาเมาส์ไปวาง */
+}
+
+/* Project Button Style */
+.project-btn-github {
+    background-color: #000000; /* สีของปุ่ม */
+    color: white; /* สีข้อความปุ่ม */
+    border: none; /* ไม่มีกรอบ */
+    padding: 10px 15px; /* ระยะห่างภายใน */
+    border-radius: 5px; /* ขอบกลม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือ */
+    margin-right: 10px; /* ระยะห่างระหว่างปุ่ม */
+    transition: background-color 0.3s; /* การเปลี่ยนสีปุ่ม */
+}
+
+/* เปลี่ยนสีปุ่มเมื่อโฮเวอร์ */
+.project-btn:hover {
+    background-color: #3392c17e; /* เปลี่ยนสีปุ่มเมื่อชี้ */
+}
+
+/*--------------------------------------------------------------
+                          BUTTON STYLES
+--------------------------------------------------------------*/
+
+/* General Button Styling */
+button {
+    background-color: #28a745; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    border: none; /* ไม่มีกรอบ */
+    padding: 10px 15px; /* ระยะห่างภายใน */
+    border-radius: 5px; /* ขอบกลม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+    margin-top: 10px; /* ระยะห่างด้านบน */
+    transition: background-color 0.3s; /* ทำให้การเปลี่ยนสีราบรื่น */
+}
+
+/* Disabled Button Style */
+button.disabled {
+    background-color: #6c757d; /* สีที่ไม่สามารถใช้งานได้ */
+    cursor: not-allowed; /* เปลี่ยนเคอร์เซอร์ */
+}
+
+/* Change color on hover */
+button:hover:not(.disabled) {
+    background-color: #218838; /* เปลี่ยนสีเมื่อชี้ */
+}
+
+/*--------------------------------------------------------------
+                          SOCIAL MEDIA STYLING
+--------------------------------------------------------------*/
+
+/* Container สำหรับ Social Media */
+div[name="content-social"] {
+    display: grid; /* ใช้ Grid Layout */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* จัดเรียงตามขนาด */
+    gap: 50px; /* ระยะห่างระหว่างบล็อก */
+    margin: 0 auto; 
+    max-width: 1000px; /* ความกว้างสูงสุด */
+}
+
+/* Styling สำหรับแต่ละบล็อก Social Media */
+.facebook {
+    display: grid;
+    grid-template-columns: 48px 1fr; /* ส่วนของไอคอนและข้อความ */
+    gap: 12px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+    align-items: center; /* จัดให้อยู่กลาง */
+    background: #1f1f23; /* สีพื้นหลัง */
+    border-radius: 12px; 
+    border-left: 6px solid #5694ea; /* ขอบทางซ้าย */
+    padding: 12px 14px; /* Padding */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* เงา */
+    transition: transform .18s ease, box-shadow .18s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+    width: 100%;
+}
+
+.Github {
+    display: grid;
+    grid-template-columns: 48px 1fr; /* ส่วนของไอคอนและข้อความ */
+    gap: 12px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+    align-items: center; /* จัดให้อยู่กลาง */
+    background: #1f1f23; /* สีพื้นหลัง */
+    border-radius: 12px; 
+    border-left: 6px solid #353536; /* ขอบทางซ้าย */
+    padding: 12px 14px; /* Padding */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* เงา */
+    transition: transform .18s ease, box-shadow .18s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+    width: 100%;
+}
+
+.Email {
+    display: grid;
+    grid-template-columns: 48px 1fr; /* ส่วนของไอคอนและข้อความ */
+    gap: 12px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+    align-items: center; /* จัดให้อยู่กลาง */
+    background: #1f1f23; /* สีพื้นหลัง */
+    border-radius: 12px; 
+    border-left: 6px solid #f55058; /* ขอบทางซ้าย */
+    padding: 12px 14px; /* Padding */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* เงา */
+    transition: transform .18s ease, box-shadow .18s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+    width: 100%;
+}
+
+/* เอฟเฟกต์เมื่อชี้ไปที่บล็อก */
+.facebook:hover, .Github:hover, .Email:hover {
+    transform: translateY(-5px); /* ให้ลอยขึ้นเล็กน้อย */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* เอฟเฟกต์เงาเมื่อชี้ */
+}
+
+/* Styling สำหรับไอคอน */
+.icon-facebook, .icon-github, .icon-email {
+    width: 48px; /* ขนาดไอคอน */
+    height: auto; 
+}
+
+/* Styling สำหรับข้อความ */
+.facebook h1, .Github h1, .Email h1, .facebook p, .Github p, .Email p {
+    color: #eee; 
+    margin: 0;
+    text-align: left; /* จัดข้อความชิดซ้าย */
+}
+
+.contact-actions {
+    display: flex; 
+    align-items: center; /* จัดให้ปุ่มอยู่ในแนวเดียวกัน */
+    gap: 10px; /* ช่องว่างระหว่างปุ่ม */
+    margin-top: 6px; 
+}
+
+/* Styling สำหรับลิงก์และปุ่ม */
+.contact-actions {
+    display: flex; 
+    align-items: center; /* จัดให้ปุ่มอยู่ในแนวเดียวกัน */
+    gap: 10px; /* ช่องว่างระหว่างปุ่ม */
+    margin-top: 6px; 
+}
+
+/* Styling สำหรับลิงก์และปุ่ม */
+.contact-link, .contact-copy {
+    font-size: 0.9rem; /* ขนาดตัวอักษร */
+    background: #2a2a2f; /* สีพื้นหลัง */
+    color: #fff; /* สีข้อความ */
+    border: 1px solid #3A3A40; /* กรอบ */
+    border-radius: 8px; /* ขอบกลม */
+    padding: 6px 12px; /* ระยะห่างภายใน */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    transition: background 0.18s ease, border-color 0.18s ease; /* เอฟเฟกต์การเปลี่ยนสี */
+    min-width: auto; /* ความกว้างขั้นต่ำให้ปุ่ม */
+    white-space: nowrap; /* ป้องกันการตัดคำในปุ่ม */
+    flex: 1; /* ทำให้ลิงก์และปุ่มมีขนาดเท่ากัน */
+    margin: 0%;
+}
+
+/* เอฟเฟกต์เมื่อชี้ไปที่ลิงก์ */
+.contact-link:hover {
+    background: #4f6a8f; /* สีเข้มกว่าเมื่อชี้ */
+}
+
+/* Styling สำหรับปุ่มคัดลอก */
+.contact-actions button {
+    background-color: #3e3e3e; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    border: none; /* ไม่มีกรอบ */
+    padding: 6px 10px; /* ระยะห่างภายใน */
+    border-radius: 5px; /* ขอบกลม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+    min-width: 120px; /* ความกว้างขั้นต่ำให้ปุ่ม */
+    text-align: center; /* จัดกลางข้อความในปุ่ม */
+    font-size: 14px; /* ขนาดตัวอักษรในปุ่ม */
+    white-space: nowrap; /* ป้องกันการตัดคำในปุ่ม */
+}
+
+/* เอฟเฟกต์เมื่อชี้ไปที่ปุ่ม */
+.contact-actions button:hover {
+    background-color: #4f6a8f; /* สีเข้มกว่าเมื่อชี้ */
+}
+/*--------------------------------------------------------------
+                      RESUME CONTENT STYLES
+--------------------------------------------------------------*/
+
+/* Resume Content Styling */
+div[name="content-resume"] {
+    display: flex; /* ใช้ flexbox */
+    flex-direction: column; /* เรียงด้านล่าง */
+    align-items: center; /* จัดที่กลาง */
+    justify-content: center; /* จัดกลาง */
+    max-width: 1200px; /* ความกว้างสูงสุด */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    padding: 30px 20px; /* ระยะห่างภายใน */
+    background: #1a1a1a; /* สีพื้นหลัง */
+    border-radius: 12px; /* ขอบกลม */
+    border: 1px solid #444; /* กรอบ */
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.1); /* เงาสีฟ้า */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+/* Resume Title Styling */
+div[name="content-resume"] h1 {
+    color: #00BFFF; /* สีหัวข้อ */
+    margin-bottom: 25px; /* ระยะห่างด้านล่าง */
+    font-size: 2.5em; /* ขนาดตัวอักษร */
+    text-shadow: 0 2px 4px rgba(0, 191, 255, 0.3); /* เงาข้อความ */
+}
+
+/* Resume Image Styling */
+div[name="content-resume"] img {
+    width: 100%; /* ความกว้าง 100% */
+    height: auto; /* ความสูงอัตโนมัติ */
+    max-width: 800px !important; /* กำหนดขนาดสูงสุด */
+    max-height: 70vh !important; /* ความสูงไม่เกิน 70vh */
+    object-fit: contain; /* ให้รูปภาพจัดเต็ม */
+    border-radius: 8px; /* ขอบกลม */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* เงา */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เอฟเฟกต์เมื่อ hover */
+}
+
+/* เอฟเฟกต์เมื่อวางเมาส์บนรูปภาพ */
+div[name="content-resume"] img:hover {
+    transform: scale(1.02); /* ขยายเล็กน้อย */
+    box-shadow: 0 8px 16px rgba(0, 191, 255, 0.2); /* เงาสีฟ้า */
+}
+
+/*--------------------------------------------------------------
+                          RESPONSIVE DESIGN
+--------------------------------------------------------------*/
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* ระยะห่างขอบ */
+    }
+    a {
+        display: block; /* ลิงก์เป็นบล็อก */
+        margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+    }
+}
