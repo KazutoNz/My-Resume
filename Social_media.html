@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header หัวข้อกดได้-->
+    <div id="navbar"></div> 
+    
+    <div name="content-social"> 
+        <div class="facebook">
+            <img src="/img/facebook.png" alt="Facebook" class="icon-facebook">
+
+            <div class="contact-body">
+                <h1>Facebook</h1>
+                <p>Chadayu Koetsantas</p>
+            </div>
+
+            <div class="contact-actions">
+                <a href="https://www.facebook.com/keta.thaim?locale=th_TH" class="contact-link">เปิดโปรไฟล์</a>
+            </div>
+        </div>
+
+        <div class="Github">
+            <img src="/img/github-sign.png" alt="GitHub" class="icon-github">
+
+            <div class="contact-body">
+                <h1>GitHub</h1>
+                <p>KazutoNz</p>
+            </div>
+
+            <div class="contact-actions">
+                <a class="contact-link" href="https://github.com/KazutoNz">เปิดโปรไฟล์</a>
+            </div>
+        </div>
+
+        <div class="Email">
+            <img src="/img/communication.png" alt="Email" class="icon-email">
+
+            <div class="contact-body">
+                <h1>Email</h1>
+                <p>chadayu15@gmail.com</p>
+            </div>
+
+            <div class="contact-actions">
+                <a class="contact-link" href="mailto:chadayu15@gmail.com">เปิดโปรไฟล์</a>
+                <input type="text" value="chadayu15@gmail.com" id="myInput" style="display: none;"> <!-- ซ่อน input -->
+                <button class="contact-copy" onclick="copyEmail()">คัดลอกอีเมล</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer>© 2025 Kazuto. All rights reserved.</footer>
+    <!-- ลิงก์สคริปต์ที่นี่ -->
+    <script src="/js/navbar.js"></script>
+    <script src="/js/Animetion.js"></script>
+    <script src="/js/copy.js"></script>
+</body>
+
+</html>
