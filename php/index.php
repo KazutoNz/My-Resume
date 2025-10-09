@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <!-- คอนเท้นต์สำหรับ About Me -->
+    <div name="content-aboutme"> 
+
+        <h1 class="hover-underline-animation center">Chadayu Koetsantas</h1>
+        <img src="../img/me.jpg" alt="Resume" class="circular-image">
+        <p>I'm a <mark>Computer Science student</mark> at <mark>Phetchaburi Rajabhat University</mark>, 22 years old. I am interested in coding for both <mark>Frontend and Backend.</mark> Currently, I use PHP, CSS, and JS at a basic level, and I am studying React in preparation for future development.</p>
+    
+    </div>
+
+    <footer>© 2025 Kazuto. All rights reserved.</footer>
+
+    <!-- ลิงก์สคริปต์ที่นี่ -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/Animetion.js"></script>
+</body>
+
+</html>
